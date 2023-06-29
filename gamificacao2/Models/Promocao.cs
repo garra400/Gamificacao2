@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace gamificacao2.Models;
+
+class Promocao
+{
+    public Produto Produto { get; set; }
+    public decimal Desconto { get; set; }
+
+    public Promocao(Produto produto, decimal desconto)
+    {
+        Produto = produto;
+        Desconto = desconto;
+    }
+
+    public override string ToString()
+    {
+        return $"{Produto.Nome} - Desconto: {Desconto}%";
+    }
+}
